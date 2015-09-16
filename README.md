@@ -1,6 +1,8 @@
-# etherdb
-Ethereum to postgreSQL data importer
+# expdbimp
+Expanse to MariaDB data importer
 
-Initial version, all is hardcoded. Create "etherdb" database with postgreSQL and run `sql/tables.sql`
+Create "expdb" database with MariaDB and run `sql/tables.sql`
 
 Install dependencies with npm install and run with `node app.js`
+
+Based on Almindor's EtherDB Project: https://github.com/almindor/etherdb
