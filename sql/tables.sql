@@ -1,5 +1,5 @@
-CREATE ROLE shiftwriter WITH LOGIN;
-ALTER ROLE shiftwriter WITH PASSWORD 'password';
+CREATE ROLE expdbwriter WITH LOGIN;
+ALTER ROLE expdbwriter WITH PASSWORD 'password';
 
 CREATE TABLE blocks (
   "number" BIGSERIAL PRIMARY KEY,
@@ -45,7 +45,7 @@ SELECT b.number
 FROM blocks b
 WHERE b.number = (SELECT max(b2.number) FROM blocks b2);
 
-GRANT SELECT ON TABLE view_last_block TO etherwriter;
-GRANT INSERT ON TABLE blocks TO etherwriter;
-GRANT INSERT ON TABLE transactions TO etherwriter;
-GRANT INSERT ON TABLE uncles TO etherwriter;
+GRANT SELECT ON TABLE view_last_block TO expdbwriter;
+GRANT INSERT ON TABLE blocks TO expdbwriter;
+GRANT INSERT ON TABLE transactions TO expdbwriter;
+GRANT INSERT ON TABLE uncles TO expdbwriter;
