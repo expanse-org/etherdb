@@ -1,5 +1,5 @@
-CREATE ROLE expdbwriter WITH LOGIN;
-ALTER ROLE expdbwriter WITH PASSWORD 'password';
+create user 'expdbwriter'@'localhost' IDENTIFIED BY 'password';
+
 
 CREATE TABLE blocks (
   "number" BIGSERIAL PRIMARY KEY,
